@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiCircleProgressView">
+        <attr name="mcp_circle_number" format="integer"/>
+        <attr name="mcp_circle_progress_color" format="color"/>
+        <attr name="mcp_circle_guide_color" format="color"/>
+        <attr name="mcp_circle_thickness" format="dimension"/>
+        <attr name="mcp_circle_padding" format="dimension"/>
+        <attr name="mcp_circle_start_angle" format="float"/>
+        <attr name="mcp_anim_duration" format="integer"/>
+        <attr name="mcp_reversed" format="boolean"/>
+        <attr name="mcp_progress" format="integer"/>
+        <attr name="mcp_enable_value_indicator" format="boolean"/>
+        <attr name="mcp_text_top_indicator" format="string"/>
+        <attr name="mcp_text_bottom_indicator" format="string"/>
+    </declare-styleable>
+</resources>

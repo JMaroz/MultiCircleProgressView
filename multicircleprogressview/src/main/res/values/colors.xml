@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mcp_circle_progress_color">#ffe01e</color>
+    <color name="mcp_circle_guide_color">#4dffffff</color>
+</resources>
