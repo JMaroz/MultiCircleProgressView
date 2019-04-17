@@ -28,8 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         circle_number.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                multicircleview.setCircleNumber(progress)
-                multicircleview.invalidate()
+                val normalizeProgress = if (progress == 0) 1 else progress
+                multicircleview.setCircleNumber(normalizeProgress)
+                multicircleview.setProgress(circle_progress.progress)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -39,5 +40,24 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        circle_angle.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                multicircleview.circleStartAngle = progress.toFloat()
+                multicircleview.setProgress(circle_progress.progress)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+
+        })
+
+        circle_reversed.setOnCheckedChangeListener { _, isChecked ->
+            multicircleview.reversed = isChecked
+            multicircleview.setProgress(circle_progress.progress)
+        }
     }
 }

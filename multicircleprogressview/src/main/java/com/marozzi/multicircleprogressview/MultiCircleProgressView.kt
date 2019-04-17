@@ -190,6 +190,7 @@ class MultiCircleProgressView : View {
             tmpCircles.add(Circle(circleProgressColor, circleGuideColor, circleThickness))
         }
         circles = tmpCircles.toTypedArray()
+        if (circleSize > 0) updateRectAngleBounds()
     }
 
     fun setProgress(@IntRange(from = 0, to = 100) progress: Int) {

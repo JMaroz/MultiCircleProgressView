@@ -13,6 +13,8 @@
             android:layout_width="200dp"
             app:mcp_circle_guide_color="@color/colorPrimary"
             app:mcp_circle_progress_color="@color/colorAccent"
+            app:mcp_circle_padding="10dp"
+            app:mcp_enable_value_indicator="false"
             android:id="@+id/multicircleview"
             android:layout_gravity="center_horizontal"
             android:layout_height="200dp"/>
@@ -50,6 +52,7 @@
             android:text="Start angle"/>
 
     <SeekBar
+            android:max="360"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
